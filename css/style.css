@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #3157d5;
+  --ink: #17233d;
+  --muted: #718096;
+  --surface: #ffffff;
+  --background: #f4f7fc;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: 'Cairo', Tahoma, sans-serif;
+}
+.navbar { background: #172b55; padding: 15px 0; }
+.navbar-brand { letter-spacing: .2px; }
+.eyebrow {
+  display: inline-block;
+  color: var(--primary);
+  background: #e8edff;
+  border-radius: 30px;
+  padding: 5px 14px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+h1 { color: #172b55; font-size: clamp(1.7rem, 4vw, 2.4rem); }
+.app-card {
+  border: 1px solid #e8edf5;
+  border-radius: 18px;
+  box-shadow: 0 8px 28px rgba(29, 48, 86, .055);
+}
+.section-title { font-size: 1.15rem; font-weight: 800; color: #1b2d50; }
+.form-label { font-weight: 700; font-size: .92rem; }
+.form-control {
+  min-height: 46px;
+  border-color: #dfe6f1;
+  border-radius: 10px;
+}
+.form-control:focus {
+  border-color: #8198ef;
+  box-shadow: 0 0 0 .2rem rgba(49, 87, 213, .12);
+}
+.btn { border-radius: 10px; min-height: 44px; font-weight: 700; }
+.btn-primary { background: var(--primary); border-color: var(--primary); }
+.count-badge {
+  background: #edf1ff; color: var(--primary);
+  border-radius: 30px; padding: 6px 12px; font-size: .82rem; font-weight: 700;
+}
+.students-list { display: grid; gap: 10px; }
+.student-item {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 13px 15px; background: #f8faff; border: 1px solid #edf1f8;
+  border-radius: 12px;
+}
+.student-name { font-weight: 700; }
+.student-meta { color: var(--muted); font-size: .82rem; }
+.average-pill {
+  background: #e8f7ef; color: #16834a; border-radius: 30px;
+  padding: 5px 10px; font-size: .8rem; font-weight: 800; white-space: nowrap;
+}
+.empty-state {
+  text-align: center; color: #8793a7; background: #f8faff;
+  border: 1px dashed #dbe3f0; border-radius: 12px; padding: 25px 12px;
+}
+.report-box { background: #f8faff; border: 1px solid #e9eef7; border-radius: 14px; padding: 18px; }
+.report-summary { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 15px; }
+.summary-chip { background: white; border: 1px solid #e8edf5; border-radius: 10px; padding: 10px 14px; }
+.summary-chip strong { color: var(--primary); }
+.report-student { padding: 10px 0; border-bottom: 1px solid #e8edf5; }
+.report-student:last-child { border-bottom: 0; }
+@media (max-width: 575px) {
+  main.container { padding-top: 2rem !important; }
+  .card-body { padding: 1.2rem !important; }
+  .student-item { align-items: flex-start; }
+}
